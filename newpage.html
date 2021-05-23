@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Map Quizzer</title>
+    <link rel="stylesheet" href="style.css">   
+    <link href="tify.css" rel="stylesheet">
+    <link href="vue.global.prod.js" rel="preload" as="script">
+    <link href="background.js" rel="preload" as="script">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Open+Sans:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Map Quizzer</h1>
+    </header>
+    <section v-cloak id="container">
+      <div id="countdown" v-bind:class="countdown.class" :style="hourglass">{{timeLeft}}</div>
+      <div id="tify" v-bind:class="tify.class"></div>
+      <section id="quiz">
+        <p id="prompt">In which year was this map published?</p>
+        <button id="hintA" class="hint" v-on:click="zoom">Hint: Zoom in for 10 seconds</button>
+        <button id="hintB" class="hint hide" v-on:click="showTitle">Hint: View title</button>
+        <p id="hintBtitle" class="hint hide">{{correctTitle}}</p>
+        <div class="img-container">
+          <div id="spinner-container"><p><img id="spinner" src="images/loading-spinner.svg" width="10">Image Loading</p></div>
+          <img id="mapImage" v-on:load="imgLoaded" v-bind:manifest="correctManifest" v-bind:src="correctImg" @error="imgLoadError">
+        </div>
+        <ul id="options">
+          <li><button id="checkPage" v-on:click="reveal" option="0" v-bind:class="answers[0].class">{{answers[0].date}}</button></li>
+          <li><button id="checkPage" v-on:click="reveal" option="1" v-bind:class="answers[1].class">{{answers[1].date}}</button></li>
+          <li><button id="checkPage" v-on:click="reveal" option="2" v-bind:class="answers[2].class">{{answers[2].date}}</button></li>
+        </ul>
+        <section id="response" v-bind:class="response">
+          <p id="verdict">{{verdict}}</p> 
+          <p>This map was published in {{correctDateStatement}}. See the full map from the Library of Congress:<br/>
+            <a v-bind:href="correctHdl" target="new">{{correctTitle}}</a>
+          </p>
+        </section>
+        <button id="next" v-on:click="reloadPage">{{progressBtn}}</button>
+      </section>
+    </section>
+    <footer>
+      <section>
+        <p>View <a href="https://www.loc.gov/maps/">all online maps from the Library of Congress</a>.</p>
+      </section>
+      <section>
+        <p>Code on <a href="">GitHub</a>.</p>
+      </section>
+      <section>
+        <p>Built with <a href="https://github.com/tify-iiif-viewer/tify/">Tify</a> IIIF image zoomer.</p>
+      </section>
+      <section>
+        <p><a href="https://chrome.google.com/webstore/detail/map-quizzer/cklfiagojkibihpbpcmhjfolmbebnpmk">Remove the Map Quizzer extension</a>.</p>
+      </section>
+    </footer>
+    <script src="vue.global.prod.js"></script>
+    <script src="background.js"></script> 
+    <script src="tify.js"></script>		
+  </body>
+</html>

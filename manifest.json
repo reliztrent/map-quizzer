@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Map Quizzer",
+  "description": "Test your cartographic acumen with each new tab. Maps from the Library of Congress.",
+  "version": "1.1",
+  "icons": { 
+    "16": "images/icon.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "chrome_url_overrides" : {
+   "newtab": "newpage.html"
+  },
+  "browser_action": {
+   "default_icon": "images/icon.png"
+  },
+  "permissions": [
+   "tabs"
+   ],
+  "background": {
+    "scripts": ["background.js","vue.global.prod.js","tify.js"],
+    "persistent":false
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
