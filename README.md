@@ -2,8 +2,7 @@
 
 ## Installation
 You can use and install this Chrome extension either by going to 
-[https://chrome.google.com/webstore/detail/map-quizzer/cklfiagojkibihpbpcmhjfolmbebnpmk]
-(https://chrome.google.com/webstore/detail/map-quizzer/cklfiagojkibihpbpcmhjfolmbebnpmk) or following these instructions:
+[https://chrome.google.com/webstore/detail/map-quizzer/cklfiagojkibihpbpcmhjfolmbebnpmk](https://chrome.google.com/webstore/detail/map-quizzer/cklfiagojkibihpbpcmhjfolmbebnpmk) or following these instructions:
 
 1. Download this repository as a .zip file cy clicking the green Code button > Download ZIP.
 1. Open the zip file, to unzip it into a folder.
