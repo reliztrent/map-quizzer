@@ -17,7 +17,7 @@ This repo contains the files for a Chrome extension that opens a map quiz every 
 
 The extension is built using [Vue.js](https://github.com/vuejs/vue) (a JavaScript framework) and [Tify](https://www.sub.uni-goettingen.de/digitale-bibliothek/digitale-werkzeuge/dokumentbetrachter-tify/) (a IIIF image viewer and zoomer, from the Göttingen State and University Library).  
 
-![Twoo screenshots of Map Quizzer. Main page with map and three date options. Zoom page with ten-second countdown.](images/screenshot.jpg)
+![Two screenshots of Map Quizzer. Main page with map and three date options. Zoom page with ten-second countdown.](images/screenshot.jpg)
 
 
 ## Data
