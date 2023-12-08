@@ -1,6 +1,6 @@
-# Maps Quizzer
+# Map Quizzer
 
-![screenshot of Map Quizzer, displaying a map and asking the user to guess which year the map was created](screenshot.png)
+screenshot.png)
 
 ## Installation
 
@@ -12,6 +12,8 @@
 5. Open the unzipped folder. 
 5. Turn off developer mode.
 6. All done! Open a new tab to start the Map Quizzer.
+
+![screenshot of Map Quizzer, displaying a map and asking the user to guess which year the map was created](images/
 
 ## Summary 
 
