@@ -1,7 +1,5 @@
 # Map Quizzer
 
-screenshot.png)
-
 ## Installation
 
 1. Download this repository as a .zip file cy clicking the green Code button > Download ZIP.
@@ -13,13 +11,14 @@ screenshot.png)
 5. Turn off developer mode.
 6. All done! Open a new tab to start the Map Quizzer.
 
-![screenshot of Map Quizzer, displaying a map and asking the user to guess which year the map was created](images/
-
 ## Summary 
 
 This repo contains the files for a Chrome extension that opens a map quiz every time a blank tab is opened in Chrome. The quiz pulls a random map from the online collections of the Library of Congress and asks you to guess which year the map was published. Three options are given: the correct publication year and two other years pulled randomly from the same corpus of maps. 
 
 The extension is built using [Vue.js](https://github.com/vuejs/vue) (a JavaScript framework) and [Tify](https://www.sub.uni-goettingen.de/digitale-bibliothek/digitale-werkzeuge/dokumentbetrachter-tify/) (a IIIF image viewer and zoomer, from the Göttingen State and University Library).  
+
+![screenshot of Map Quizzer, displaying a map and asking the user to guess which year the map was created](images/screenshot.png)
+
 
 ## Data
 Map Quizzer selects from a pre-processed json-formatted list of maps online from Library of Congress at [loc.gov/maps](https://www.loc.gov/maps). The data was pulled using the loc.gov API, and maps were bias sampled with the following filters:
